@@ -1,0 +1,28 @@
+{
+  "name": "request-header-parser-ms",
+  "version": "1.0.0",
+  "description": "Free Code Camp request header parser microservice.",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/j-klassen/request-header-parser-ms.git"
+  },
+  "keywords": [
+    "free",
+    "code",
+    "camp"
+  ],
+  "author": "Jake Klassen",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/j-klassen/request-header-parser-ms/issues"
+  },
+  "homepage": "https://github.com/j-klassen/request-header-parser-ms#readme",
+  "dependencies": {
+    "express": "^4.13.4",
+    "jade": "^1.11.0"
+  }
+}
