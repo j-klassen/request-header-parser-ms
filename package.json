@@ -23,9 +23,10 @@
   "homepage": "https://github.com/j-klassen/request-header-parser-ms#readme",
   "dependencies": {
     "express": "^4.13.4",
+    "ipaddr": "0.0.9",
     "jade": "^1.11.0"
   },
-	"engines": {
-		"node": "5.5.0"
-	}
+  "engines": {
+    "node": "5.5.0"
+  }
 }
