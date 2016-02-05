@@ -10,6 +10,7 @@ const port = process.env.PORT || 3000;
 
 const apiRouter = express.Router();
 
+// Make sure the proper client ip is used.
 app.enable('trust proxy');
 
 apiRouter.get('/whoami', (req, res) => {
@@ -21,8 +22,7 @@ apiRouter.get('/whoami', (req, res) => {
 	res.json({
 		ip: ipaddr.process(req.ip).toString(),
 		language: req.acceptsLanguages()[0] || 'unknown',
-		software: software || 'unknown',
-		ips: [req.ip, req.ips]
+		software: software || 'unknown'
 	});
 });
 
