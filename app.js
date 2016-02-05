@@ -11,10 +11,15 @@ const port = process.env.PORT || 3000;
 const apiRouter = express.Router();
 
 apiRouter.get('/whoami', (req, res) => {
+	// Extract some OS info
+	let software = req.headers['user-agent']
+										.match(/\((.*?)\)/)[0]
+										.replace(/([\(\)])/g, '');
+
 	res.json({
 		ip: ipaddr.process(req.ip).toString(),
 		language: req.acceptsLanguages()[0] || 'unknown',
-		software: req.headers['user-agent'].match(/\((.*?)\)/)[0] || 'unknown'
+		software: software || 'unknown'
 	});
 });
 
