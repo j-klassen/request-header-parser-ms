@@ -10,6 +10,8 @@ const port = process.env.PORT || 3000;
 
 const apiRouter = express.Router();
 
+app.enable('trust proxy');
+
 apiRouter.get('/whoami', (req, res) => {
 	// Extract some OS info
 	let software = req.headers['user-agent']
@@ -19,7 +21,8 @@ apiRouter.get('/whoami', (req, res) => {
 	res.json({
 		ip: ipaddr.process(req.ip).toString(),
 		language: req.acceptsLanguages()[0] || 'unknown',
-		software: software || 'unknown'
+		software: software || 'unknown',
+		ips: [req.ip, req.ips]
 	});
 });
 
